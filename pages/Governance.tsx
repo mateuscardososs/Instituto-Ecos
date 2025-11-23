@@ -1,6 +1,5 @@
 import React from 'react';
 import { Section, SectionTitle } from '../components/Section';
-import { BOARD } from '../constants';
 import { FileText, Download } from 'lucide-react';
 
 export const Governance: React.FC = () => {
@@ -14,52 +13,6 @@ export const Governance: React.FC = () => {
           </p>
         </div>
       </div>
-
-      <Section>
-        <SectionTitle title="Corpo Diretivo" subtitle="Mandato 2023 - 2027" />
-        
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          {/* Executive Board */}
-          <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#234568]">
-            <h3 className="text-2xl font-bold text-[#234568] mb-6 pb-2 border-b border-gray-100">
-              Diretoria Executiva
-            </h3>
-            <ul className="space-y-6">
-              {BOARD.executive.map((member, idx) => (
-                <li key={idx} className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-[#234568] font-bold text-lg shrink-0">
-                    {member.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-800 text-lg">{member.name}</h4>
-                    <span className="text-[#6DA89B] font-medium">{member.role}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Fiscal Council */}
-          <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#C88849]">
-            <h3 className="text-2xl font-bold text-[#C88849] mb-6 pb-2 border-b border-gray-100">
-              Conselho Fiscal
-            </h3>
-            <ul className="space-y-6">
-              {BOARD.fiscal.map((member, idx) => (
-                <li key={idx} className="flex items-start gap-4">
-                   <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-[#C88849] font-bold text-lg shrink-0">
-                    {member.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-800 text-lg">{member.name}</h4>
-                    <span className="text-[#6DA89B] font-medium">{member.role}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </Section>
 
       {/* Funding Sources */}
       <Section bgColor="bg-gray-50">
